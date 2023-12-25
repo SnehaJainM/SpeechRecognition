@@ -27,3 +27,6 @@ def indexx():
             #wav speech sample  >> Open speech repository. OR convert mp3 to wav format.
     return render_template('index.html',transcript=transcript)
 
+
+if __name__ == "__main__":
+    app.run(debug=True,threaded=True)
