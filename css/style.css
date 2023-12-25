@@ -1,0 +1,17 @@
+h1 , p , input{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#speechrecognitioncontainer
+{
+    margin:20px;
+}
+#submitbutton
+{
+    color:white;
+    background-color: lightcoral;
+    border-radius: 5px;
+    border:none;
+    padding:10px 30px;
+    cursor:pointer;
+    margin-top:10px;
+}

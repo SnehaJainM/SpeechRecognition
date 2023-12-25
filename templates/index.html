@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheets" href="{{url_for('static',filename='css/style.css')}}">
+    <link rel="stylesheet" href="static\style.css">
+    <title>SpeechToText</title>
+    <style>
+    body
+    {
+        background-color: rgb(10, 10, 9);
+        text-align: center;
+    }
+    h1 , p , input
+    {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        color:rgb(248, 249, 250);
+    }
+    #speechrecognitioncontainer
+    {
+        margin:20px;
+    }
+    #text
+    {
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        text-align: center;
+        
+    }
+    #submitbutton
+    {
+        color:white;
+        background-color: lightcoral;
+        border-radius: 5px;
+        border:none;
+        padding:10px 30px;
+        cursor:pointer;
+        margin-top:10px;
+    }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Upload an Audio File.</h1>
+        <form method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <br> <br>
+        <input type="submit" id="submitbutton" name="Transcribe">
+        </form>
+
+        {% if transcript != "" %}
+        <div id="speechrecognitioncontainer">
+            <h1>Transcript: </h1>
+            <p id="text">{{transcript}}</p>
+        </div>
+        {% endif %}
+    </div>
+
+</body>
+</html>
